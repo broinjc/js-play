@@ -2,6 +2,6 @@ js-play
 =======
 changed
 Playing around with javascript
-MAKE CHANGE!!!
+LEFT side changeMAKE CHANGE!!!
 
 Making a change here...
