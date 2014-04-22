@@ -2,6 +2,6 @@ js-play
 =======
 changed
 Playing around with javascript
-righ screws up MAKE CHANGE!!!
+better line, left and right, manual merge
 
 Making a change here...
