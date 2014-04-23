@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>randomColor</title>
+    <style type="text/css">
+        body{
+            margin:0px;
+            font-family:sans-serif;
+        }
+        .swatch{
+            padding: 20px;
+            float: left;
+        }
+    </style>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function(){ // can't work with what we don't have!
+
+        // Button
+        var randColor = $('.randColor');
+        var split = $('.split');
+
+        split.on('click',function(){
+            var sw = $(this).closest('div');
+            sw.clone().prependTo('body');
+        });
+
+        randColor.on('click',function(){
+            var sw = $(this).closest('div');
+            var hex = $(this).next().next();
+
+            css = {
+                backgroundColor:'2438ff',
+                color:'ffffff'
+            };
+
+            css.backgroundColor = rhex();
+            sw.css(css);
+            hex.html("#"+rhex());
+        });
+
+
+        // Generates a random hex color
+        function rhex(){
+            var letters = '0123456789abcdef'.split('');
+            var hexString = '';
+            for (var i = 0; i < 6; i++) {
+                hexString += letters[Math.ceil(Math.random()*100)%16];
+            };
+            return hexString;
+        }
+
+        // Go from 0 -255 and backdown
+    });
+    </script>
+</head>
+<body>
+
+    <div class='swatch'  id="swatch-1">
+        <button class='randColor'>Random Color</button> <button class='split'>Split</button>
+        <h1></h1>
+    </div>
+
+</body>
+</html>
