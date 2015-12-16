@@ -5,4 +5,17 @@ This is just a javascript playground. Currently we're Making little one pagers:
 
 #Color Scheme Designer
 
-![Colors](http://cl.ly/image/0V1u3X282y29/colors.jpg)
+![Colors](colors.png)
+
+The fun little algorithm,
+
+```js
+          function rhex(){
+            var letters = '0123456789abcdef'.split('');
+            var hexString = '';
+            for (var i = 0; i < 6; i++) {
+              hexString += letters[Math.ceil(Math.random()*100)%16];
+            };
+            return hexString;
+        }
+  ```
